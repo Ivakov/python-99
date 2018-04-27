@@ -1,18 +1,18 @@
 def lsort(x):
-	x.sort(key=len)
-	return x
+    x.sort(key=len)
+    return x
 
 
 def lfsort(x):
-    x.sort(key=len)
-    ret=[]
-    for X in x:
-        if(ret==[]):
-            ret.append([X])
-        elif(len(ret[-1][-1])==len(X)):
-            ret[-1].append(X)
-        else:
-            ret.append([X])
+    ret=[[x[0]]]
+    for i in range(1,len(x)):
+        is_added = False
+        for X in ret:
+            if len(X[-1]) == len(x[i]):
+                X.append(x[i])
+                is_added = True
+        if is_added == False:
+            ret.append([x[i]])
 
     ret.sort(key=len)
     retA=[]
@@ -20,4 +20,3 @@ def lfsort(x):
         retA=retA+Y
 
     return retA
-
