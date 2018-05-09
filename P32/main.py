@@ -6,4 +6,4 @@ def gcd(x,y):
     if r == 0:
         return y
     else:
-        return gcd(r,y)
+        return gcd(y,r)
