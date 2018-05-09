@@ -1,12 +1,9 @@
 def gcd(x,y):
+    if x < y:
+        x,y=y,x
+
     r = x % y
-    s = y % x
-    if x > y:
-        if r == 0:
-            return y
-        else:
-            return gcd(r,y)
-    elif s == 0:
-        return x
+    if r == 0:
+        return y
     else:
-        return gcd(x,s)
+        return gcd(r,y)
