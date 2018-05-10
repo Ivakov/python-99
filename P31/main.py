@@ -3,6 +3,6 @@ def is_prime(x):
         return False
     else:       
         for y in range(2,x):
-            if (x < 2 or x % y == 0):
+            if x % y == 0:
                 return False
         return True 
