@@ -4,19 +4,25 @@ def lsort(x):
 
 
 def lfsort(x):
-    ret=[[x[0]]]
-    for i in range(1,len(x)):
-        is_added = False
-        for j in ret:
-            if len(j[-1]) == len(x[i]):
-                j.append(x[i])
-                is_added = True
-        if is_added == False:
-            ret.append([x[i]])
+    a = []
+    for i in range(len(x)): 
+        if a == []:
+            a.append([x[i]])
+           
+        else:
+            is_added = False
+            for j in a:
+                if len(j[-1]) == len(x[i]):
+                    j.append(x[i])
+                    is_added = True
 
-    ret.sort(key=len)
-    ret_A=[]
-    for k in ret:
-        ret_A=ret_A+k
+            if is_added == False:
+                a.append([x[i]])
 
-    return ret_A
+    a.sort(key=len)
+ 
+    flat_a = []
+    for k in a:
+        flat_a = flat_a + k
+    
+    return flat_a 
