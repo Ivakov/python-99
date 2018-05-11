@@ -1,12 +1,10 @@
 def encode(x):
-    ret=[]
-    for X in x:
-        if(ret==[] or ret[-1][-1]!=X):
-            ret=ret+[[X]]
+    ret = []
+    for i in x:
+        if (ret == [] or ret[-1][-1] != i):
+            ret.append([1,i])
         else:
-            ret[-1].append(X)
-        retA=[]
-        for Y in ret:
-            retA=retA+[[len(Y),Y[0]]]
-    return retA
+            ret[-1][0] = ret[-1][0] + 1
+
+    return ret
 
