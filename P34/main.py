@@ -1,13 +1,12 @@
 import sys
 sys.path.append('../') 
 
-from P32.main import gcd
+from P33.main import is_coprime
 
 def totient_phi(x):
     a = []
     for y in range(1,x):
-        if gcd(x,y) == 1:
+        if is_coprime(x,y) == True:
             a.append(y)
-    
+
     return len(a)
-            
