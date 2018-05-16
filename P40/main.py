@@ -2,11 +2,10 @@ import sys
 sys.path.append('../')
 
 from P39.main import prime_numbers
+from P31.main import is_prime
 
 def goldbach(x):
-    primes = prime_numbers(2,x)
-    for i in  primes:
-        for j in primes:
-            if i + j == x:
-                return [i,j]
+    for i in  prime_numbers(2,x):
+        if is_prime(x-i):
+            return [i,x-i]
     return []             
