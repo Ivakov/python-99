@@ -4,10 +4,9 @@ sys.path.append('../')
 from P39.main import prime_numbers
 
 def goldbach(x):
-    y = 0
-    for i in prime_numbers(y,x):
-        for j in prime_numbers(i,x):
+    primes = prime_numbers(2,x)
+    for i in  primes:
+        for j in primes:
             if i + j == x:
                 return [i,j]
-    return []
-            
+    return []             
