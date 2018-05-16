@@ -5,13 +5,11 @@ from P36.main import prime_factors_multi
 
 def totient_phi(x):
     assign = prime_factors_multi(x)
-    assigned = 0
+    assigned = 1
     for i in assign:
         expand = (i[0]-1) * i[0] ** (i[1]-1)
-        if assigned == 0:
-            assigned = expand
-        else:
-            assigned = assigned * expand
-          
+        assigned = assigned * expand
+
     return assigned
+
             
