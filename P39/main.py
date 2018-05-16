@@ -7,10 +7,10 @@ def prime_numbers(x,y):
     if x > y:
         x,y = y,x
     
-    prime = []
+    primes = []
     for i in range(x,y+1):
         if is_prime(i):
-            prime.append(i)
+            primes.append(i)
 
-    return prime
+    return primes
     
