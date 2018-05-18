@@ -5,7 +5,8 @@ def lsort(x):
 
 def lfsort(x):
     a = []
-    for i in range(len(x)): 
+    for i in range(len(x)):
+        print(i) 
         if a == []:
             a.append([x[i]])
            
@@ -19,8 +20,8 @@ def lfsort(x):
             if is_added == False:
                 a.append([x[i]])
 
-    a.sort(key=len)
- 
+    a.sort(key=len) 
+
     flat_a = []
     for k in a:
         flat_a = flat_a + k
