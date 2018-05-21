@@ -2,28 +2,24 @@ def lsort(x):
     x.sort(key=len)
     return x
 
-
 def lfsort(x):
     a = []
-    for i in range(len(x)):
-        print(i) 
+    for i in x: 
         if a == []:
-            a.append([x[i]])
-           
+            a.append([i])
         else:
             is_added = False
             for j in a:
-                if len(j[-1]) == len(x[i]):
-                    j.append(x[i])
+                if len(j[-1]) == len(i):
+                    j.append(i)
                     is_added = True
 
             if is_added == False:
-                a.append([x[i]])
+                a.append([i])
 
-    a.sort(key=len) 
-
+    a.sort(key=len)
     flat_a = []
     for k in a:
         flat_a = flat_a + k
-    
-    return flat_a 
+
+    return flat_a
