@@ -3,12 +3,12 @@ sys.path.append('../')
 
 from P40.main import goldbach
 
-def goldbach_list(x,y,z=None):
+def goldbach_list(lower_limit,upper_limit,condition=0):
     ret = []
-    for i in range(x,y+1):
+    for i in range(lower_limit,upper_limit+1):
         assign = goldbach(i)
         if assign:
             prime_sum = [i] + assign
-            if (z == None or assign[0] > z and assign[1] > z):
+            if condition == 0 or assign[0] > condition and assign[1] > condition:
                 ret.append(prime_sum)
-    return ret 
+    return ret       
