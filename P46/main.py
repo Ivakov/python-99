@@ -1,3 +1,6 @@
+import itertools
+
+
 def AND(x,y):
     return x == True and y == True
 
@@ -19,7 +22,6 @@ def IMP(x,y):
 def EQ(x,y):
     return x == y
 
-import itertools
 def table(formula):
     truth_table = []
     for a,b in itertools.product([True,False], repeat=2):
