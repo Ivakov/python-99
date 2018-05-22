@@ -11,4 +11,3 @@ def goldbach(x):
         difference = x - i 
         if difference in primes:
             return [i,difference]
-    return []
