@@ -9,6 +9,6 @@ def goldbach_list(lower_limit,upper_limit,condition=0):
         assign = goldbach(i)
         if assign:
             prime_sum = [i] + assign
-            if condition == 0 or assign[0] > condition and assign[1] > condition:
+            if assign[0] > condition and assign[1] > condition:
                 ret.append(prime_sum)
     return ret       
