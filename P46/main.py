@@ -19,12 +19,9 @@ def IMP(x,y):
 def EQ(x,y):
     return x == y
 
+import itertools
 def table(formula):
     truth_table = []
-    truths_a = [True,True,False,False]
-    truths_b = [True,False,True,False]
-    for i in range(4):
-        a = truths_a[i]
-        b = truths_b[i]
+    for a,b in itertools.product([True,False], repeat=2):
         truth_table.append([a,b,formula(a,b)])
     return truth_table
