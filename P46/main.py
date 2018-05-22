@@ -19,6 +19,12 @@ def IMP(x,y):
 def EQ(x,y):
     return x == y
 
-def table(x):
-    return [[True, True, True], [True, False, True], [False, True, False], [False, False, False]]
-
+def table(formula):
+    truth_table = []
+    truths_a = [True,True,False,False]
+    truths_b = [True,False,True,False]
+    for i in range(4):
+        a = truths_a[i]
+        b = truths_b[i]
+        truth_table.append([a,b,formula(a,b)])
+    return truth_table
