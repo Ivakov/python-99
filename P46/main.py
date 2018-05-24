@@ -2,22 +2,22 @@ import itertools
 
 
 def AND(x,y):
-    return x == True and y == True
+    return x and y 
 
 def OR(x,y):
-    return x == True or y == True
+    return x or y 
 
 def NAND(x,y):
-    return x == False or y == False 
+    return not x or not y
 
 def NOR(x,y):
-    return x == False and y == False
+    return not x and not y
 
 def XOR(x,y):
     return x != y
 
 def IMP(x,y):
-    return x == y or y == True
+    return x == y or y
 
 def EQ(x,y):
     return x == y
