@@ -7,8 +7,6 @@ def goldbach_list(lower_limit,upper_limit,condition=0):
     ret = []
     for i in range(lower_limit,upper_limit+1):
         assign = goldbach(i)
-        if assign:
-            prime_sum = [i] + assign
-            if assign[0] > condition and assign[1] > condition:
-                ret.append(prime_sum)
+        if assign and assign[0] > condition:
+            ret.append([i]+assign)
     return ret       
