@@ -8,10 +8,10 @@ def OR(x,y):
     return x | y
 
 def NAND(x,y):
-    return not x & y
+    return not AND(x,y)
 
 def NOR(x,y):
-    return not x | y
+    return not OR(x,y)
 
 def XOR(x,y):
     return x ^ y
