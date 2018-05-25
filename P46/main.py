@@ -17,7 +17,7 @@ def XOR(x,y):
     return x ^ y
 
 def IMP(x,y):
-    return x == y or y
+    return (x == y) | y
 
 def EQ(x,y):
     return x == y
