@@ -1,9 +1,8 @@
 def flatten(x):
-    ret=[]
-    for X in (x):
-        if (isinstance(X, list)):
-            ret = ret + flatten(X)
+    flat = []
+    for i in x :
+        if isinstance(i,list):
+            flat = flat + flatten(i)
         else:
-            ret.append(X)
-    return ret
-
+            flat.append(i)
+    return flat
