@@ -1,14 +1,14 @@
 def encode_modified(x):
-    ret=[]
-    for X in x:
-        if(ret==[] or ret[-1][-1]!=X):
-            ret=ret+[[X]]
+    ret = []
+    for i in x:
+        if ret == [] or ret[-1][-1] != i:
+            ret = ret + [[i]]
         else:
-            ret[-1].append(X)
-        retA=[]
-        for Y in ret:
-            if(len(Y)==1):
-                retA=retA+Y
+            ret[-1].append(i)
+        retA = []
+        for j in ret:
+            if len(j) == 1:
+                retA = retA + j
             else:
-                retA=retA+[[len(Y),Y[0]]]
+                retA = retA + [[len(j),j[0]]]
     return retA
