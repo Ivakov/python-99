@@ -9,5 +9,4 @@ def encode_direct(x):
             ret[-1] = [2,i]
         else:
             ret.append(i)
-
     return ret             
