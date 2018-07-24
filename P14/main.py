@@ -1,5 +1,5 @@
 def duplicate(x):
-    ret=[]
-    for X in (x):
-        ret=ret+[X,X]
+    ret = []
+    for i in x:
+        ret = ret + [i,i]
     return ret 
